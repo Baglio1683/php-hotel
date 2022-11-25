@@ -55,11 +55,17 @@
 
             ];
 
-            var_dump($hotels);
-            echo "<br />";
 
             for ($i = 0; $i < count($hotels); $i++) {
-                echo $i;
+
+                foreach ($hotels[$i] as $key => $value) {
+
+                    echo $key;
+                    echo $value;
+                    echo "<br />";
+                }
+
+                echo '------------------------------------------------------------------------------------------------------------';
                 echo "<br />";
             }
 
