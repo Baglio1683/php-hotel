@@ -55,24 +55,23 @@
 
             ];
 
-
-
-            // for ($i = 0; $i < count($hotels); $i++) {
-            
-            //     foreach ($hotels[$i] as $key => $value) {
-            
-            //         echo $key;
-            //         echo $value;
-            //         echo "<br />";
-            //     }
-            
-            //     echo '------------------------------------------------------------------------------------------------------------';
-            //     echo "<br />";
-            // }
-            
-
             ?>
 
+
+
+
+
+
+            <form action="index.php" method="GET">
+
+                <button type="submit" name="name">Filtro Parcheggi</button>
+
+            </form>
+
+            <?php $name = $_GET["name"];
+
+            echo 'ciao', $name;
+            ?>
 
             <table class="table">
 
