@@ -56,37 +56,73 @@
             ];
 
 
-            for ($i = 0; $i < count($hotels); $i++) {
 
-                foreach ($hotels[$i] as $key => $value) {
-
-                    echo $key;
-                    echo $value;
-                    echo "<br />";
-                }
-
-                echo '------------------------------------------------------------------------------------------------------------';
-                echo "<br />";
-            }
+            // for ($i = 0; $i < count($hotels); $i++) {
+            
+            //     foreach ($hotels[$i] as $key => $value) {
+            
+            //         echo $key;
+            //         echo $value;
+            //         echo "<br />";
+            //     }
+            
+            //     echo '------------------------------------------------------------------------------------------------------------';
+            //     echo "<br />";
+            // }
+            
 
             ?>
-        </div>
 
 
-        <!-- STAMPA DEGLI HOTEL -->
+            <table class="table">
+
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Parking</th>
+                        <th scope="col">Vote</th>
+                        <th scope="col">Distance to Center</th>
+                    </tr>
+                </thead>
+
+                <tbody>
 
 
+                    <?php
+                    for ($i = 0; $i < count($hotels); $i++) { ?>
 
+                    <tr>
 
+                        <th scope="row">
+                            <?php echo $i ?>
+                        </th>
 
+                        <?php foreach ($hotels[$i] as $key => $value) { ?>
 
+                        <td>
+                            <?php
 
+                            if ($value === true) {
+                                echo 'Yes';
+                            } else if ($value === false) {
+                                echo 'Not';
+                            } else {
+                                echo $value;
+                            }
+                            ?>
+                        </td>
 
+                        <?php } ?>
 
+                    </tr>
 
+                    <?php } ?>
 
+                </tbody>
 
-
+            </table>
 
     </main>
 
